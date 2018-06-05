@@ -1,0 +1,25 @@
+#include <iostream>
+#include <iomanip>
+#include <cstdlib>
+using namespace std;
+int main(int argc, char * argv[])
+{
+	int exp, x, y;
+	char *P;
+	char op;
+	op = *argv[2];
+	x = strtod(argv[1], &P);
+	y = strtod(argv[3], &P);
+	if (op == '+')
+		exp = x + y;
+	else if (op == '-')
+		exp = x - y;
+	else if (op == '*')
+		exp = x * y;
+	else if (op == '/'& y != 0)
+		exp = x / y;
+	else
+		cout << "Error" << endl;
+	cout << x << op << y << "=" << exp << endl;
+	return 0;
+}
